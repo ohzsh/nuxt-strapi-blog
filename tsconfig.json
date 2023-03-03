@@ -1,0 +1,12 @@
+{
+  "extends": "./.nuxt/tsconfig.json",
+  "includes": [
+    "global.d.ts",
+    "./suffix-shim.d.ts",
+  ],
+  "exclude": [
+    "**/node_modules/*",
+    "./dist",
+    "./.output"
+  ],
+}

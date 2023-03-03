@@ -1,0 +1,17 @@
+# Nuxt dev/build outputs
+.nuxt/
+dist/
+.cache/
+public/
+build/
+logs/
+tmp/
+*.log
+.output
+.idea/
+# Node dependencies
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
