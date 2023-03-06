@@ -149,39 +149,41 @@ const getImages = ({ attributes }: any) => {
         </div>
       </div>
     </template>
-    <section v-else class="flex items-center h-full p-16 pt-0 dark:text-gray-100">
-      <div class="container flex flex-col items-center mx-auto justify-center px-5 my-8">
-        <div class="max-w-md text-center">
-          <h2 class="mb-8 font-extrabold dark:text-gray-600 flex flex-col items-center">
-            <svg class="max-w-50 max-h-50" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1024 1024">
-              <path fill="url(#paint0_linear_2804_3741)" d="M780.675 425.858H460.309C454.079 425.858 449.029 430.908 449.029 437.138V757.504C449.029 763.733 454.079 768.783 460.309 768.783H780.675C786.905 768.783 791.955 763.733 791.955 757.504V437.138C791.955 430.908 786.905 425.858 780.675 425.858Z" />
-              <path fill="#D7EAFE" d="M449.038 425.858H260.135V768.783H449.038V425.858Z" />
-              <path fill="#B7D2ED" d="M260.134 425.858L162 530.972H375.139L449.03 425.858H260.134Z" />
-              <path fill="#D7EAFE" d="M791.962 425.862L862 532.333H519.575L449.029 425.354L791.962 425.862Z" />
-              <line stroke-linecap="round" stroke-width="11.2799" stroke="#D7EAFE" y2="330.539" x2="429.897" y1="330.539" x1="365.037" />
-              <line stroke-linecap="round" stroke-width="11.2799" stroke="#D7EAFE" transform="matrix(-1 0 0 1 681.415 336.179)" y2="-5.63996" x2="70.4995" y1="-5.63996" x1="5.63996" />
-              <line stroke-linecap="round" stroke-width="11.2799" stroke="#D7EAFE" y2="283.343" x2="461.176" y1="237.48" x1="415.313" />
-              <line stroke-linecap="round" stroke-width="11.2799" stroke="#D7EAFE" transform="matrix(0.642788 -0.766044 -0.766044 -0.642788 579.355 295.806)" y2="-5.63996" x2="70.4995" y1="-5.63996" x1="5.63996" />
-              <line stroke-linecap="round" stroke-width="11.2799" stroke="#D7EAFE" y2="268.499" x2="520.136" y1="203.64" x1="520.136" />
-              <defs>
-                <linearGradient id="paint0_linear_2804_3741" gradientUnits="userSpaceOnUse" y2="218.093" x2="621.427" y1="767.477" x1="621.427">
-                  <stop stop-color="#B7D2ED" />
-                  <stop stop-color="#9AB4CF" offset="1" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </h2>
-          <p class="text-2xl font-semibold md:text-3xl">
-            啊哦😯！
-          </p>
-          <p class=" mb-8 dark:text-gray-400">
-            你还没有任何动态赶紧去发布一个吧
-          </p>
-          <button class="px-4 py-2 font-semibold text-sm bg-white text-black  dark:bg-violet-500 dark:text-white rounded-md shadow-sm hover:scale-125 ease-in-out duration-150" @click="router.push({ name: 'publish' })">
-            去看看
-          </button>
+    <ClientOnly>
+      <section v-if="!res?.data?.length" class="flex items-center h-full p-16 pt-0 dark:text-gray-100">
+        <div class="container flex flex-col items-center mx-auto justify-center px-5 my-8">
+          <div class="max-w-md text-center">
+            <h2 class="mb-8 font-extrabold dark:text-gray-600 flex flex-col items-center">
+              <svg class="max-w-50 max-h-50" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1024 1024">
+                <path fill="url(#paint0_linear_2804_3741)" d="M780.675 425.858H460.309C454.079 425.858 449.029 430.908 449.029 437.138V757.504C449.029 763.733 454.079 768.783 460.309 768.783H780.675C786.905 768.783 791.955 763.733 791.955 757.504V437.138C791.955 430.908 786.905 425.858 780.675 425.858Z" />
+                <path fill="#D7EAFE" d="M449.038 425.858H260.135V768.783H449.038V425.858Z" />
+                <path fill="#B7D2ED" d="M260.134 425.858L162 530.972H375.139L449.03 425.858H260.134Z" />
+                <path fill="#D7EAFE" d="M791.962 425.862L862 532.333H519.575L449.029 425.354L791.962 425.862Z" />
+                <line stroke-linecap="round" stroke-width="11.2799" stroke="#D7EAFE" y2="330.539" x2="429.897" y1="330.539" x1="365.037" />
+                <line stroke-linecap="round" stroke-width="11.2799" stroke="#D7EAFE" transform="matrix(-1 0 0 1 681.415 336.179)" y2="-5.63996" x2="70.4995" y1="-5.63996" x1="5.63996" />
+                <line stroke-linecap="round" stroke-width="11.2799" stroke="#D7EAFE" y2="283.343" x2="461.176" y1="237.48" x1="415.313" />
+                <line stroke-linecap="round" stroke-width="11.2799" stroke="#D7EAFE" transform="matrix(0.642788 -0.766044 -0.766044 -0.642788 579.355 295.806)" y2="-5.63996" x2="70.4995" y1="-5.63996" x1="5.63996" />
+                <line stroke-linecap="round" stroke-width="11.2799" stroke="#D7EAFE" y2="268.499" x2="520.136" y1="203.64" x1="520.136" />
+                <defs>
+                  <linearGradient id="paint0_linear_2804_3741" gradientUnits="userSpaceOnUse" y2="218.093" x2="621.427" y1="767.477" x1="621.427">
+                    <stop stop-color="#B7D2ED" />
+                    <stop stop-color="#9AB4CF" offset="1" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </h2>
+            <p class="text-2xl font-semibold md:text-3xl">
+              啊哦😯！
+            </p>
+            <p class=" mb-8 dark:text-gray-400">
+              你还没有任何动态赶紧去发布一个吧
+            </p>
+            <button class="px-4 py-2 font-semibold text-sm bg-white text-black  dark:bg-violet-500 dark:text-white rounded-md shadow-sm hover:scale-125 ease-in-out duration-150" @click="router.push({ name: 'publish' })">
+              去看看
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </ClientOnly>
   </div>
 </template>

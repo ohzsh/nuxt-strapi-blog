@@ -20,9 +20,9 @@ function closePreview() {
   <div class="image-preview">
     <img :src="imageUrl" @click="previewImage">
     <div v-show="showModal" class="modal" @click.self="closePreview">
+      <div class="i-carbon-close-filled bg-white w-60px h-60px cursor-pointer absolute right-40px top-40px" @click.self="closePreview" />
       <img
-        class="object-cover w-full
-              dark:bg-gray-500 aspect-square" :src="imageUrl"
+        class="object-contain w-full aspect-square" :src="imageUrl"
       >
     </div>
   </div>

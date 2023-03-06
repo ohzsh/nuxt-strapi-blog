@@ -86,6 +86,14 @@ const handleSubmit = async (name: TYPE) => {
                   data-bitwarden-watching="1"
                 >
                   <div class="space-y-4">
+                    <div v-if="type === 'register'">
+                      <label for="email" class="block mb-2 text-sm">Username</label>
+                      <input
+                        v-model="form[type].username"
+                        placeholder="you name ?"
+                        class="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100"
+                      >
+                    </div>
                     <div>
                       <label for="email" class="block mb-2 text-sm">Email address</label>
                       <input
